@@ -1,100 +1,93 @@
-# Libft: Kendi Yazdığınız İlk Kütüphane
+# Libft
 
-## Proje Açıklaması
+## Project Overview
 
-Libft projesi, C programlama dilinde kendi kütüphanenizi yazmanızı amaçlayan bir projedir. Bu kütüphane, genel amaçlı fonksiyonlar içerir ve ileriye dönük C projelerinizde kullanmanız için temel bir araç seti sağlar. Bu proje, C dilinde yaygın olarak kullanılan birçok standart fonksiyonu kendi başınıza yazmayı ve anlamayı hedefler.
+Libft is your first library, which is a C library that includes a range of essential functions that will serve as the foundation for your future C programming projects. This project aims to deepen your understanding of how these functions work, how to implement them, and how to use them effectively.
 
-## İçindekiler
-1. [Giriş](#giriş)
-2. [Genel Talimatlar](#genel-talimatlar)
-3. [Zorunlu Kısım](#zorunlu-kısım)
-    - [Teknik Özellikler](#teknik-özellikler)
-    - [Bölüm 1: Libc Fonksiyonları](#bölüm-1-libc-fonksiyonları)
-    - [Bölüm 2: Ekstra Fonksiyonlar](#bölüm-2-ekstra-fonksiyonlar)
-4. [Bonus Kısım](#bonus-kısım)
-5. [Gönderme ve Peer-Evaluation](#gönderme-ve-peer-evaluation)
+## Purpose
 
-## Giriş
+The purpose of this project is to create a C library called `libft` that replicates many functions found in the standard C library. By doing this, you will gain a deeper understanding of how these functions operate, and you will be better prepared for future C programming projects.
 
-C programlama dilinde standart fonksiyonlara erişiminiz olmadığında programlama oldukça zor ve sıkıcı olabilir. Bu proje ile kendi kütüphanenizi oluşturarak, C dilinde sık kullanılan fonksiyonları yeniden yazmayı ve anlamayı öğreneceksiniz. Bu kütüphane, ileride yapacağınız C projelerinde faydalı olacak ve onları daha verimli yazmanıza yardımcı olacaktır.
+## What You Will Learn
 
-## Genel Talimatlar
+- How to implement commonly used standard functions from scratch.
+- How to manage memory allocation and deallocation.
+- How to create and manipulate linked lists.
+- How to write reusable and modular code.
+- How to use Makefile for project compilation.
 
-- Projeleriniz C programlama dilinde yazılmalıdır.
-- Projeleriniz Norm’a uygun olarak yazılmalıdır. Bonus dosyalarınız veya fonksiyonlarınız varsa, bunlar norm kontrolüne dahil edilir ve norm hatası varsa 0 alırsınız.
-- Fonksiyonlarınız beklenmedik bir şekilde sonlanmamalıdır (Segmentasyon hatası, bus hatası, double free hatası, vb.). Eğer bu hatalar yaşanırsa 0 alırsınız.
-- Heap’de ayırdığınız hafıza adresleri gerekli olduğu durumlarda serbest bırakılmalıdır. Hiçbir istisna tolere edilmeyecektir.
-- Eğer proje Makefile dosyası ile teslim edilmesi gerekiyorsa, Makefile dosyası Wall, Wextra, Werror bayrakları ile derlemelidir.
-- Makefile dosyanız en azından $(NAME), all, clean, fclean ve re kurallarını içermelidir.
-- Projenize bonus kısmını eklemek için Makefile dosyanıza bonus kuralını dahil etmeniz gerekmektedir.
-- Kendi yazdığınız libft kütüphanesini kullanmanıza izin veriliyorsa, bu kütüphane ve Makefile dosyasını proje dizinindeki libft klasörüne kopyalamanız gerekmektedir.
+## Project Contents
 
-## Zorunlu Kısım
+### 1. Libc Functions
 
-### Teknik Özellikler
+These functions replicate the behavior of their standard C library counterparts but are prefixed with `ft_`.
 
-- Global değişken tanımlamak yasaktır.
-- Yardımcı fonksiyonlara ihtiyacınız varsa, bunları statik olarak tanımlayın.
-- Tüm dosyalarınızı deponuzun kök dizinine yerleştirin.
-- Kullanılmayan dosya yüklemek yasaktır.
-- Her .c dosyası, -Wall -Wextra -Werror bayrakları ile derlenmelidir.
-- Kitaplığınızı oluşturmak için ar komutunu kullanmalısınız. libtool komutunun kullanılması yasaktır.
-- libft.a dosyanız, deponuzun kökünde oluşturulmalıdır.
+- `ft_isalpha`
+- `ft_isdigit`
+- `ft_isalnum`
+- `ft_isascii`
+- `ft_isprint`
+- `ft_strlen`
+- `ft_memset`
+- `ft_bzero`
+- `ft_memcpy`
+- `ft_memmove`
+- `ft_strlcpy`
+- `ft_strlcat`
+- `ft_toupper`
+- `ft_tolower`
+- `ft_strchr`
+- `ft_strrchr`
+- `ft_strncmp`
+- `ft_memchr`
+- `ft_memcmp`
+- `ft_strnstr`
+- `ft_atoi`
+- `ft_calloc`
+- `ft_strdup`
 
-### Bölüm 1: Libc Fonksiyonları
+### 2. Additional Functions
 
-- isalpha
-- isdigit
-- isalnum
-- isascii
-- isprint
-- strlen
-- memset
-- bzero
-- memcpy
-- memmove
-- strlcpy
-- strlcat
-- toupper
-- tolower
-- strchr
-- strrchr
-- strncmp
-- memchr
-- memcmp
-- strnstr
-- atoi
-- calloc
-- strdup
+These functions provide additional functionality not found in the standard C library.
 
-### Bölüm 2: Ekstra Fonksiyonlar
+- `ft_substr`
+- `ft_strjoin`
+- `ft_strtrim`
+- `ft_split`
+- `ft_itoa`
+- `ft_strmapi`
+- `ft_striteri`
+- `ft_putchar_fd`
+- `ft_putstr_fd`
+- `ft_putendl_fd`
+- `ft_putnbr_fd`
 
-- ft_substr
-- ft_strjoin
-- ft_strtrim
-- ft_split
-- ft_itoa
-- ft_strmapi
-- ft_striteri
-- ft_putchar_fd
-- ft_putstr_fd
-- ft_putendl_fd
-- ft_putnbr_fd
+### 3. Bonus Part
 
-## Bonus Kısım
+The bonus part includes functions for manipulating linked lists. The following functions use the `t_list` structure, which represents a single element in a linked list.
 
-Bonus kısmı, zorunlu kısmı tamamladıktan sonra yapabileceğiniz ekstra görevlerdir. Başarıyla tamamlanırsa ekstra puan getirir. Aşağıdaki liste işlevleri içermelidir:
+- `ft_lstnew`
+- `ft_lstadd_front`
+- `ft_lstsize`
+- `ft_lstlast`
+- `ft_lstadd_back`
+- `ft_lstdelone`
+- `ft_lstclear`
+- `ft_lstiter`
+- `ft_lstmap`
 
-- ft_lstnew
-- ft_lstadd_front
-- ft_lstsize
-- ft_lstlast
-- ft_lstadd_back
-- ft_lstdelone
-- ft_lstclear
-- ft_lstiter
-- ft_lstmap
+## Compilation
 
-## Gönderme ve Peer-Evaluation
+Use the provided `Makefile` to compile the library. The Makefile includes the following targets:
 
-Projenizi Git deponuza gönderin. Savunma sırasında yalnızca deponuzdaki çalışmalar değerlendirilecektir. Dosyalarınızın adlarını doğru olduklarından emin olun.
+- `all`: Compile the library.
+- `clean`: Remove object files.
+- `fclean`: Remove object files and the library file.
+- `re`: Recompile the library.
+- `bonus`: Compile the bonus part of the project.
+
+## Usage
+After compiling the library, include libft.h in your projects and link against libft.a to use the functions provided by your library.
+
+## Conclusion
+Libft is an essential project that lays the groundwork for more complex C programming projects. By completing this project, you will enhance your understanding of fundamental C programming concepts and improve your ability to write efficient and reusable code.
